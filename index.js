@@ -110,5 +110,14 @@ const LimpiarPantalla = () => {
 
     //LIMPIAR EL DIV
     divPrincipal.innerText = ""; 
+
+    const divContador = document.createElement("div");
+    const pContador = document.createElement("p");
+
+    pContador.innerText = `Discos cargados: ${contadorDiscos}`;
+    pContador.classList.add("menor180");
+
+    divContador.append(pContador);
+    divPrincipal.append(divContador);
 }
 
