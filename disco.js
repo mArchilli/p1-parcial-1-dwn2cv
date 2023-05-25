@@ -11,7 +11,9 @@ class disco {
     ingresarDatos (codigos) {
         do {
             this.nombre = prompt("Ingrese el nombre del disco: ").trim();
-            
+            if (!isNaN(this.nombre) || this.nombre == "") {
+                alert("El valor ingresado no puede ser un numero ni enviarse vacio");
+            }
         } while (!isNaN(this.nombre) || this.nombre == "");
         do {
             this.autor = prompt("Ingrese el autor o banda del disco: ").trim();
